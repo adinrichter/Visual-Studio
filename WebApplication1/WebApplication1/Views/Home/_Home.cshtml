@@ -1,0 +1,54 @@
+﻿<!-- ko with: home -->
+
+<div class="jumbotron green-text">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+    <div class="text-center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oMHLkcc9I9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="newspaper">Click me!<br /></div>
+    </div>
+</div>
+<div class="row green-text">
+    <div class="col-md-4">
+        <h2>Your information</h2>
+        <p>This section shows how you can call ASP.NET Web API to get the user details.</p>
+        <p data-bind="text: myHometown"></p>
+       
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET Single Page Application (SPA) helps you build applications that include significant client-side interactions using HTML, CSS, and JavaScript.
+            It's now easier than ever before to getting started writing highly interactive web applications.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+<script>
+    const newspaperSpinning = [
+        { transform: 'rotate(0) scale(1)' },
+        { transform: 'rotate(360deg) scale(0)' }
+    ];
+
+    const newspaperTiming = {
+        duration: 2000,
+        iterations: 1,
+    }
+
+    const newspaper = document.querySelector(".newspaper");
+
+    newspaper.addEventListener('click', () => {
+        newspaper.animate(newspaperSpinning, newspaperTiming);
+    });
+
+</script>
+
+<!-- /ko -->
